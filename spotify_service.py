@@ -1,14 +1,17 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-import os
+#import os
 import re
 import time
+import streamlit as st
 
 def get_spotify_client():
     """Initialize and return a Spotify client."""
     try:
-        client_id = os.getenv('SPOTIPY_CLIENT_ID')
-        client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
+        # client_id = os.getenv('SPOTIPY_CLIENT_ID')
+        # client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
+        client_id = st.secrets["spotify"]["client_id"]
+        client_secret = st.secrets["spotify"]["client_secret"]
         
         if not client_id or not client_secret:
             raise ValueError("Spotify credentials not found in environment variables")
