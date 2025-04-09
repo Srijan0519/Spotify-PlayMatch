@@ -38,7 +38,7 @@ def main():
     reset = col2.button("Reset")
 
     if reset:
-    for key in st.session_state:
+      for key in st.session_state:
         st.session_state[key] = None
     st.rerun()  # ✅ new
 
