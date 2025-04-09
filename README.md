@@ -2,6 +2,8 @@
 
 A powerful Streamlit web application that leverages Spotify's API and Google's Gemini AI to analyze playlists and recommend similar songs that match the musical DNA of your favorite playlists.
 
+Link to application- https://carmgjzwg2wgv85savvjxj.streamlit.app/
+
 ![Spotify Playlist Analyzer](static/new_banner.jpg)
 
 ## 🚀 Features
