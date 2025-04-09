@@ -38,9 +38,12 @@ def main():
     reset = col2.button("Reset")
 
     if reset:
-        for key in st.session_state:
-            st.session_state[key] = None
-        st.experimental_rerun()
+    for key in st.session_state:
+        st.session_state[key] = None
+    st.rerun()  # ✅ new
+
+
+
 
     if analyze and url:
         if not is_valid_spotify_url(url):
