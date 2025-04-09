@@ -5,7 +5,8 @@ import json
 import random
 import logging
 import re
-from dotenv import load_dotenv
+import streamlit as st
+#from dotenv import load_dotenv
 
 def extract_json_from_text(text):
     """Extract JSON from text that might contain other content."""
@@ -52,7 +53,8 @@ def extract_json_from_text(text):
 
 def setup_gemini():
     """Initialize the Gemini API client."""
-    api_key = os.getenv('GEMINI_API_KEY')
+    #api_key = os.getenv('GEMINI_API_KEY')
+    api_key = st.secrets["gemini"]["api_key"]
     if not api_key:
         raise ValueError("GEMINI_API_KEY environment variable not found")
     
